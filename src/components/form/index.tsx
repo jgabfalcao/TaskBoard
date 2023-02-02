@@ -1,10 +1,11 @@
 import React  from "react";
 import Button from "../button";
+import style from './Form.module.scss'
 
 function Form (){
     return(
-      <form>
-        <div>
+      <form className={style.newTask}>
+        <div className={style.inputContainer}>
           <label htmlFor="task">
             Adicione um novo estudo 
           </label>
@@ -15,7 +16,7 @@ function Form (){
           placeholder="O que voce quer estudar" required
           />
         </div>
-        <div>
+        <div className={style.inputContainer}>
           <label htmlFor="time">
             Tempo
           </label>
