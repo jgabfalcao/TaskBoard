@@ -1,10 +1,15 @@
 import React from "react";
+import { text } from "stream/consumers";
 import style from './Button.module.scss'
 
-function Button () {
+interface Props {
+  btnText: string;
+}
+
+function Button ({btnText}: Props) {
     return (
       <button className={style.button}>
-        Botão
+        {btnText}
       </button>
     )
   }
