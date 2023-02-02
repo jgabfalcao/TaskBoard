@@ -1,8 +1,7 @@
 import React  from "react";
 import Button from "../button";
 
-class Form extends React.Component{
-  render (){
+function Form (){
     return(
       <form>
         <div>
@@ -34,6 +33,6 @@ class Form extends React.Component{
       </form>
     )
   }
-}
+
 
 export default Form;
