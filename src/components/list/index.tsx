@@ -1,16 +1,18 @@
+import { time } from 'console';
 import React from 'react';
+import Item from './item';
 import style from './List.module.scss'
 
 function List(){
   const tasks = [{
-    tarefa: 'React',
-    tempo: '02:00:00'
+    task: 'React',
+    time: '02:00:00'
   }, {
-    tarefa: 'TypeScript',
-    tempo: '01:00:00'
+    task: 'TypeScript',
+    time: '01:00:00'
   }, {
-    tarefa: 'JavaScript',
-    tempo: '03:00:00  '
+    task: 'JavaScript',
+    time: '03:00:00  '
   }
   ]
 
@@ -19,15 +21,11 @@ function List(){
         <h2>Estudos do dia</h2>
         <ul>
           {tasks.map((item, index) => (
-            <li key={index} className={style.item}>
-              <h3>
-               {item.tarefa}
-              </h3>
-                <span>
-                {item.tempo }
-                </span>
-              
-            </li>
+           <Item 
+           key={index}
+           task={item.task}
+           time={item.time}
+           />
           ))}
         </ul>
     </aside>
