@@ -4,11 +4,12 @@ import style from './Button.module.scss'
 
 interface Props {
   btnText: string;
+  btnType: "button" | "submit" | "reset" | undefined
 }
 
-function Button ({btnText}: Props) {
+function Button ({btnText, btnType}: Props){
     return (
-      <button className={style.button}>
+      <button type={btnType} className={style.button}>
         {btnText}
       </button>
     )
