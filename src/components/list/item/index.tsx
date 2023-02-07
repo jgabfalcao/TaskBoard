@@ -1,11 +1,9 @@
+import { ITask } from '../../../types/task';
 import style from '../List.module.scss'
 
-interface Props{
-  task: string;
-  time: string;
-}
 
-function Item({task, time}: Props){
+function Item({task, time, selected, completed, id}: ITask){
+  console.log('item atual: ', { task, time, selected, completed, id })
   return(
     <li className={style.item}>
     <h3>
