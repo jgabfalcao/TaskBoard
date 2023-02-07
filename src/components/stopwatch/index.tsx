@@ -9,7 +9,8 @@ function StopWatch(){
       <div className={style.watchWrapper}>
         <Watch />
       </div>
-      <Button
+      <Button 
+      btnType="button"
       btnText="Começar"
       />
     </div>
